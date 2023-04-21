@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Team_1 = require("./Team");
+var Player_1 = require("./Player");
+var Nationality_1 = require("./Nationality");
+var team = new Team_1.Team("Arsenal");
+team.addPlayer(new Player_1.Player("Thierry Henry", 40, "Football player", 14, Nationality_1.Nationality.France, "Arsenal", 250000));
+team.addPlayer(new Player_1.Player("Harry Kane", 35, "Football player", 4, Nationality_1.Nationality.England, "Tottenham", 150000));
+team.addPlayer(new Player_1.Player("Cristiano Ronaldo", 38, "King", 7, Nationality_1.Nationality.Portugal, "MU", 1000000));
+team.addPlayer(new Player_1.Player("Lionel Messi", 35, "Football player", 10, Nationality_1.Nationality.Argentina, "PSG", 100000));
+team.addPlayer(new Player_1.Player("Toni Kroos", 32, "Football player", 8, Nationality_1.Nationality.Germany, "Real Madrid", 110000));
+team.addPlayer(new Player_1.Player("Xabi Alonso", 45, "Football player", 14, Nationality_1.Nationality.Spain, "Liverpool", 220000));
+team.addPlayer(new Player_1.Player("Kaoru Mitoma", 28, "Football player", 22, Nationality_1.Nationality.Japan, "Brighton", 230000));
+team.addPlayer(new Player_1.Player("Son Heung Min", 32, "Football player", 23, Nationality_1.Nationality.Korean, "Tottenham ", 330000));
+team.addPlayer(new Player_1.Player("Neymar", 30, "Football player", 23, Nationality_1.Nationality.Brazil, "PSG", 660000));
+console.table(team.player);
+team.updatePlayer(9, new Player_1.Player("Lewandowski", 33, "Football player", 9, Nationality_1.Nationality.Germany, "Bayen", 400000));
+team.updatePlayer(10, new Player_1.Player("Muller", 33, "Football player", 9, Nationality_1.Nationality.Germany, "Bayen", 190000));
+console.table(team.player);
+// team.detelePlayer(2);
+// console.table(team.player);
+// console.table(team.searchAge(40));
+// console.table(team.searchByClub("PSG"));
+// console.table(team.searchBySalary(190000));
+// console.table(team.getHighestPaidPlayer());
+// console.table(team.searchPlayer("Lewandowski"))
+console.table(team.searchNationality(Nationality_1.Nationality.Spain));
